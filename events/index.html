@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery crash course | selectors</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        body{
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            line-height: 1.5em;
+
+        }
+
+        header{
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom:  10px;
+        }
+
+        container{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>jquery crash course</h1>
+    </header>
+    <div id="container">
+        <h3>Button Events</h3>
+        <button id='btn1'>Button 1</button>
+        <button id='btn2'>Button 2</button>
+
+        <p id='para1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate obcaecati repellendus et quos accusamus aliquid similique! Minima ea perspiciatis, 
+            repudiandae ipsam inventore sit fugit non itaque eos animi quos cupiditate.</p>
+        <!-- <h3 id='coords'></h3> -->
+        <hr>
+        <form id="form">
+            <label for="">Name</label><br>
+            <input type="text" id='name' value=""><br>
+            <label for="">Email</label><br>
+            <input type="email" id='email' value=""><br>
+            <label for="">Gender</label><br>
+            <select name="" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br>
+            <input type="submit" id='submit' value="Submit">
+            
+        </form>
+    </div>
+
+
+
+    <script>
+        /*
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+            alert('Button 1 clicked!');
+        });
+        });
+        $('#btn1').on('click', function(){
+            alert('Button 1 clicked!');
+        });
+        
+
+        $('#btn1').click(function(){
+            $('#para1').hide(1000, function(){
+                alert('Button 1 clicked!');
+            });
+        });
+
+        $('#btn2').click(function(){
+            $('#para1').show(1000, function(){
+                alert('Button 1 clicked!');
+            });
+        });
+
+       
+        $('#btn1').click(function(){
+            $('#para1').toggle(1000);
+        });
+         
+
+         $('#btn1').dblclick(function(){
+            $('#para1').toggle(1000);
+        });
+        
+        $('#btn1').hover(function(){
+            $('#para1').toggle(1000);
+        });
+
+  
+        $('#btn1').on('mouseenter', function(){
+            $('#para1').toggle();
+        });
+
+        $('#btn1').on('mouseleave', function(){
+            $('#para1').toggle();
+        });
+
+        $('#btn1').on('mousemove', function(){
+            $('#para1').toggle();
+        });
+
+        $('#btn1').on('mouseup', function(){
+            $('#para1').toggle();
+        });
+        $('#btn1').on('mousedown', function(){
+            $('#para1').toggle();
+        });
+
+       
+        $('#btn1').click(function(e){
+            alert(e.currentTarget.outerHTML);
+        });
+        
+
+        $(document).on('mousemove', function(){
+            console.log('Coords Y: ' + event.clientY + ' Coords X: ' + event.clientX);
+        }); 
+
+        $(document).on('mousemove', function(){
+            $('#coords').html('Coords Y: ' + event.clientY + ' Coords X: ' + event.clientX);
+        }); 
+
+        
+
+
+        $('input').focus(function(){
+            $(this).css('background', 'pink');
+        });
+        $('input').blur(function(){
+            $(this).css('background', 'white');
+        });
+        
+
+        $('input#name').keyup(function(){
+            console.log($(this).val());
+        });
+        $('input#name').keydown(function(e){
+            console.log(e.target.value);
+        });
+
+        $('select#gender').change(function(e){
+            console.log(e.target.value);
+        });
+
+        */
+        $('#form').submit(function(e){
+            e.preventDefault(); // Prevent the default form submission behavior
+            console.log('Form submitted!');
+        });
+
+
+    </script>
+</body>
+</html>
